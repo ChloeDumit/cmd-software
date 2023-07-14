@@ -1,16 +1,14 @@
-import React, { useContext } from "react";
+import React from "react";
 import Headroom from "react-headroom";
 import "./Header.scss";
-import { greeting, services } from "../../portfolio";
-import logo from "../../assets/logo.png";
+import short_logo from "../../assets/lottie/logo.json";
+import DisplayLottie from "../displayLottie/DisplayLottie";
 function Header() {
-  const viewServices = services.display;
-
   return (
     <Headroom>
       <header className="header">
         <a href="/" className="logo">
-          <img src={logo} />{" "}
+          <DisplayLottie animationData={short_logo} />
         </a>
         <input className="menu-btn" type="checkbox" id="menu-btn" />
         <label
@@ -25,7 +23,7 @@ function Header() {
             <a href="#services">Servicios</a>
           </li>
           <li>
-            <a href="#about-us">Sobre Nosotros</a>
+            <a href="#about">Sobre Nosotros</a>
           </li>
           <li>
             <a href="#contact">Contacto</a>

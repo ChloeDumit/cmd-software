@@ -1,10 +1,12 @@
-import React, { useContext } from "react";
+import React, { useContext, useRef } from "react";
 import "./Contact.scss";
 import SocialMedia from "../../components/socialMedia/SocialMedia";
 import { illustration, contactInfo } from "../../portfolio";
 import { Fade } from "react-reveal";
 import email from "../../assets/lottie/email";
 import DisplayLottie from "../../components/displayLottie/DisplayLottie";
+import emailjs from "@emailjs/browser";
+import ContactForm from "../../components/contactForm/ContactForm";
 
 export default function Contact() {
   return (
@@ -25,13 +27,16 @@ export default function Contact() {
               </a>
               <br />
               <br />
-              <SocialMedia />
+              <ContactForm />
             </div>
           </div>
           <div className="contact-image-div">
             <DisplayLottie animationData={email} />
           </div>
         </div>
+        <br />
+        <br />
+        <SocialMedia />
       </div>
     </Fade>
   );

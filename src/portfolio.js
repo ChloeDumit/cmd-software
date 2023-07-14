@@ -39,10 +39,10 @@ const about = {
 // Social Media Links
 
 const socialMediaLinks = {
-  github: "https://github.com/chloedumit",
+  instagram: "https://instagram.com/cmdsoftware?igshid=NTc4MTIwNjQ2YQ==",
   linkedin:
     "https://www.linkedin.com/in/chlo%C3%A9-dumit-armand-ugon-85450415a/",
-  gmail: "dumitchloe@gmail.com",
+  gmail: "cmd.software.info@gmail.com",
   // Instagram, Twitter and Kaggle are also supported in the links!
   // To customize icons and social links, tweak src/components/SocialMedia
   display: true, // Set true to display this section, defaults to false

@@ -10,7 +10,7 @@
 .rectangle {
   box-shadow: 0px 20px 50px $darkBoxShadow;
   -webkit-transition: all 0.3s ease;
-padding: 2rem;
+  padding: 2rem;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
   margin-top: 50px;
@@ -44,7 +44,7 @@ padding: 2rem;
   -webkit-box-orient: vertical;
 }
 .talk-card-subtitle {
-  margin-top: 35px;
+  margin-top: -5px;
   text-align: center;
   padding-left: 30px;
   padding-right: 30px;
