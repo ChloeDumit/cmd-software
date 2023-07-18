@@ -1,11 +1,6 @@
-import React, { useContext } from "react";
+import React from "react";
 import { Fade } from "react-reveal";
-import emoji from "react-easy-emoji";
 import "./About.scss";
-import aboutLottie from "../../assets/lottie/about.json";
-import DisplayLottie from "../../components/displayLottie/DisplayLottie";
-import SocialMedia from "../../components/socialMedia/SocialMedia";
-import Button from "../../components/button/Button";
 
 import { illustration, about } from "../../portfolio";
 
@@ -18,7 +13,7 @@ export default function About() {
       <div className="about-main" id="about">
         <div className="about-main">
           <div className="about-image-div">
-            <DisplayLottie animationData={aboutLottie} />
+            <img src={about.photo} />
           </div>
           <div className="about-text-div">
             <div>

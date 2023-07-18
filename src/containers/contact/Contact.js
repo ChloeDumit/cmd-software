@@ -25,17 +25,12 @@ export default function Contact() {
               >
                 {contactInfo.email_address}
               </a>
-              <br />
-              <br />
-              <ContactForm />
             </div>
           </div>
-          <div className="contact-image-div">
-            <DisplayLottie animationData={email} />
+          <div className="contact-form-div">
+            <ContactForm />
           </div>
         </div>
-        <br />
-        <br />
         <SocialMedia />
       </div>
     </Fade>

@@ -26,13 +26,15 @@ const greeting = {
     "Transformando tu visión en realidad digital: Desarrollo web a medida para destacarte en línea."
   ),
   resumeLink: "", // Set to empty to hide the button
+  photo: require("./assets/images/mockup.png"),
   displayGreeting: true, // Set false to hide this section, defaults to true
 };
 
 const about = {
   title: "Sobre nosotros",
   subTitle:
-    "Bienvenidos a nuestra página de venta de desarrollo web. Somos un equipo apasionado de desarrolladores full stack, especializados en crear soluciones web personalizadas que se adaptan a tus necesidades y objetivos comerciales. Desde diseños atractivos hasta funcionalidades avanzadas, trabajamos para impulsar tu negocio y dejar una impresión duradera en tus usuarios. Contáctanos hoy y convierte tus ideas en realidad.",
+    "¡Bienvenido/a a nuestra página! Soy Chloé Dumit, una apasionada desarrolladora full stack con una especialización en crear soluciones web personalizadas que se ajusten a tus necesidades y objetivos comerciales. Desde diseños atractivos hasta funcionalidades avanzadas, mi objetivo es impulsar tu negocio y asegurar que dejes una impresión duradera en tus usuarios. ¡Contáctame hoy mismo y hagamos realidad tus ideas web juntos!",
+  photo: require("./assets/images/chloe.png"),
   displayAbout: true,
 };
 

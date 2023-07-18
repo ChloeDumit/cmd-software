@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { Fade } from "react-reveal";
 import emoji from "react-easy-emoji";
 import "./Greeting.scss";
-import womanGreeting from "../../assets/lottie/womanGreeting.json";
+import mockup from "../../assets/lottie/mockup.json";
 import DisplayLottie from "../../components/displayLottie/DisplayLottie";
 import SocialMedia from "../../components/socialMedia/SocialMedia";
 import Button from "../../components/button/Button";
@@ -27,7 +27,7 @@ export default function Greeting() {
             </div>
           </div>
           <div className="greeting-image-div">
-            <DisplayLottie animationData={womanGreeting} />
+            <DisplayLottie animationData={mockup} />
           </div>
         </div>
       </div>

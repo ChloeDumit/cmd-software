@@ -53,10 +53,12 @@ export default function ContactForm() {
           value={message}
           onChange={(e) => setMessage(e.target.value)}
         />
-        <button type="submit" value="Send">
-          {" "}
-          Enviar
-        </button>
+        <div className="button-container">
+          <button type="submit" value="Send">
+            {" "}
+            Enviar
+          </button>
+        </div>
       </form>
     </div>
   );

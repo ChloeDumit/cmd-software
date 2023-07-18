@@ -36,6 +36,7 @@
 .greeting-text {
   font-size: 70px;
   line-height: 1.1;
+  font-weight: 100;
   color: $textColor !important;
 }
 
@@ -47,6 +48,7 @@
 .greeting-image-div > img {
   max-width: 100%;
   height: auto;
+  margin-left: 15px;
 }
 
 .wave-emoji {

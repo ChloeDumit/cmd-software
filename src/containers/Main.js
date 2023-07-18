@@ -28,7 +28,7 @@ const Main = () => {
   }, []);
 
   return (
-    <div>
+    <div className="main-container">
       {isShowingSplashAnimation && splashScreen.enabled ? (
         <SplashScreen />
       ) : (
