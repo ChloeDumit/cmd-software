@@ -3,20 +3,69 @@
 #topButton {
   visibility: hidden;
   position: fixed;
-  bottom: 20px;
-  right: 30px;
+  bottom: $spacingLg;
+  right: $spacingLg;
   z-index: 99;
   border: none;
   outline: none;
-  background-color: $buttonColor;
+  background: $primaryGradient;
   color: white;
   cursor: pointer;
-  padding: 15px;
-  border-radius: 15px;
-  font-size: 25px;
+  padding: $spacingMd;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: $buttonShadow;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0;
+  transform: translateY(20px);
+  
+  &.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  &:hover {
+    background: $secondaryGradient;
+    transform: translateY(-3px);
+    box-shadow: $buttonShadowHover;
+  }
+  
+  &:active {
+    transform: translateY(-1px);
+  }
+  
+  i {
+    transition: transform 0.3s ease;
+  }
+  
+  &:hover i {
+    transform: translateY(-2px);
+  }
 }
 
-#topButton:hover {
-  background-color: $topButtonHover;
-  transition: all ease-in-out 0.2s;
+/* Media Query */
+@media (max-width: 768px) {
+  #topButton {
+    bottom: $spacingMd;
+    right: $spacingMd;
+    width: 3rem;
+    height: 3rem;
+    font-size: 1rem;
+    padding: $spacingSm;
+  }
+}
+
+@media (max-width: 480px) {
+  #topButton {
+    bottom: $spacingSm;
+    right: $spacingSm;
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 0.9rem;
+  }
 }

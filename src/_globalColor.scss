@@ -76,3 +76,29 @@ $medium: #FF0096;
 $stackoverflow: #FF0096;
 $instagram: #FF0096;
 $kaggle: #20beff;
+
+// Professional design system additions
+$primaryGradient: linear-gradient(135deg, #00C2CB 0%, #FF0096 100%);
+$secondaryGradient: linear-gradient(135deg, #243119 0%, #00C2CB 100%);
+$cardGradient: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+$overlayGradient: linear-gradient(135deg, rgba(0, 194, 203, 0.1) 0%, rgba(255, 0, 150, 0.1) 100%);
+
+// Enhanced shadows
+$cardShadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+$cardShadowHover: 0 8px 30px rgba(0, 0, 0, 0.12);
+$buttonShadow: 0 2px 10px rgba(0, 194, 203, 0.3);
+$buttonShadowHover: 0 4px 15px rgba(0, 194, 203, 0.4);
+
+// Border radius
+$borderRadiusSmall: 8px;
+$borderRadiusMedium: 12px;
+$borderRadiusLarge: 20px;
+$borderRadiusCard: 16px;
+
+// Spacing
+$spacingXs: 4px;
+$spacingSm: 8px;
+$spacingMd: 16px;
+$spacingLg: 24px;
+$spacingXl: 32px;
+$spacingXxl: 48px;

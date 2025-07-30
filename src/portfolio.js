@@ -33,7 +33,7 @@ const greeting = {
 const about = {
   title: "Sobre nosotros",
   subTitle:
-    "¡Bienvenido/a a nuestra página! Soy Chloé Dumit, una apasionada desarrolladora full stack con una especialización en crear soluciones web personalizadas que se ajusten a tus necesidades y objetivos comerciales. Desde diseños atractivos hasta funcionalidades avanzadas, mi objetivo es impulsar tu negocio y asegurar que dejes una impresión duradera en tus usuarios. ¡Contáctame hoy mismo y hagamos realidad tus ideas web juntos!",
+    "En CMD Software nos dedicamos a la creación de sitios web y soluciones de software a medida, ayudando a empresas y emprendedores a potenciar su presencia digital. Somos una empresa uruguaya con más de 5 años de experiencia en el desarrollo de proyectos personalizados, eficientes y escalables. Trabajamos con clientes de distintos sectores, adaptándonos a sus necesidades específicas y transformando ideas en productos reales y funcionales. Nos enfocamos en la comunicación clara, el código de calidad y la construcción de relaciones de confianza a largo plazo. En CMD Software no solo desarrollamos tecnología: construimos tu presencia digital con propósito y profesionalismo.",
   photo: require("./assets/images/chloe.png"),
   displayAbout: true,
 };
@@ -58,25 +58,31 @@ const services = {
   display: true, //Set it to true to show services Section
   services: [
     {
-      logo: require("./assets/images/1.png"),
       title: "Web Informativa",
       description:
         "Amplía tu alcance en línea con nuestras páginas web que destacan y transmiten tu mensaje de manera efectiva.",
     },
     {
-      logo: require("./assets/images/2.png"),
       title: "Ecommerce",
       description:
         "Crea una tienda virtual atractiva y funcional para maximizar tus ventas y llegar a nuevos clientes en cualquier momento y lugar.",
     },
     {
-      logo: require("./assets/images/3.png"),
       title: "Reserva de servicios",
       description:
         " Simplifica la gestión de reservas y optimiza tu negocio con nuestras páginas web especializadas en reserva de servicios.",
     },
     {
-      logo: require("./assets/images/4.png"),
+      title: "Integración de sistemas",
+      description:
+        "Conecta tu sitio web con plataformas externas como pasarelas de pago, CRMs, sistemas de reservas o redes sociales para automatizar procesos y mejorar la eficiencia de tu negocio.",
+    },
+    {
+      title: "Blog Profesional",
+      description:
+        "Comparte contenido de valor y posiciona tu marca con blogs profesionales, fáciles de administrar y optimizados para SEO.",
+    },
+    {
       title: "A medida",
       description:
         "Haz realidad tu visión con soluciones web personalizadas, desde interfaces intuitivas hasta características avanzadas, para impulsar tu negocio y dejar una impresión duradera en tus usuarios.",

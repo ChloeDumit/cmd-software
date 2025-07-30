@@ -6,11 +6,12 @@ export default function ContactForm() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [loading, setLoading] = useState(false)
   const form = useRef();
 
   const sendEmail = (e) => {
     e.preventDefault();
-
+    setLoading(true)
     emailjs
       .sendForm(
         "service_n7lobvq",
@@ -21,9 +22,11 @@ export default function ContactForm() {
       .then(
         (result) => {
           console.log(result.text);
+          setLoading(false)
           setName("");
           setEmail("");
           setMessage("");
+
         },
         (error) => {
           console.log(error.text);
@@ -55,8 +58,7 @@ export default function ContactForm() {
         />
         <div className="button-container">
           <button type="submit" value="Send">
-            {" "}
-            Enviar
+            {loading ? 'Enviando...' : 'Enviar'}
           </button>
         </div>
       </form>

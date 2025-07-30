@@ -2,13 +2,13 @@ import React from "react";
 import Headroom from "react-headroom";
 import "./Header.scss";
 import short_logo from "../../assets/lottie/logo.json";
-import DisplayLottie from "../displayLottie/DisplayLottie";
+import Lottie from "lottie-react";
 function Header() {
   return (
     <Headroom>
       <header className="header">
         <a href="/" className="logo">
-          <DisplayLottie animationData={short_logo} />
+          <Lottie animationData={short_logo} loop={true} />
         </a>
         <input className="menu-btn" type="checkbox" id="menu-btn" />
         <label

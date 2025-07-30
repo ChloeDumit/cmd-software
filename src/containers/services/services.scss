@@ -1,40 +1,98 @@
 @import "../../_globalColor";
+
 .services-cards-div {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
-  gap: 2rem 2rem;
-
+  grid-template-columns: repeat(3, 1fr);
+  gap: $spacingXl;
+  margin-top: $spacingXl;
+  width: 90%;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
 }
 
 .services-heading {
-  font-size: 60px;
-  font-weight: 400;
+  font-size: 3rem;
+  font-weight: 700;
   color: $textColor !important;
+  text-align: center;
+  margin-bottom: $spacingXl;
+  background: $primaryGradient;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: -0.02em;
 }
 
 .services-container {
   display: flex;
-  width: 90%;
-  padding: 20px 20px 6rem;
-  margin: 0px auto;
-  margin-top: 2rem;
+  width: 100%;
+  background: $cardGradient;
+  padding: $spacingXxl $spacingLg;
+  margin: 0 auto;
+  border-radius: $borderRadiusLarge;
+  position: relative;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: $borderRadiusLarge;
+    z-index: -1;
+  }
 }
 
 .services-container > * {
   flex: 1;
 }
 
-/* Media Query */
+.card-container {
+  width: 100%;
+}
 
+/* Media Query */
 @media (max-width: 1380px) {
   .services-heading {
-    font-size: 40px;
+    font-size: 2.5rem;
+  }
+  
+  .services-cards-div {
+    grid-template-columns: repeat(3, 1fr);
+    gap: $spacingLg;
   }
 }
 
 @media (max-width: 768px) {
+  .services-container {
+    width: 95%;
+    padding: $spacingXl $spacingMd;
+    margin-top: $spacingMd;
+  }
+  
   .services-heading {
-    font-size: 30px;
+    font-size: 2rem;
     text-align: center;
+    margin-bottom: $spacingLg;
+  }
+  
+  .services-cards-div {
+    grid-template-columns: 1fr;
+    gap: $spacingMd;
+    margin-top: $spacingLg;
+  }
+}
+
+@media (max-width: 480px) {
+  .services-container {
+    width: 100%;
+    padding: $spacingLg $spacingSm;
+    border-radius: $borderRadiusMedium;
+  }
+  
+  .services-heading {
+    font-size: 1.8rem;
   }
 }

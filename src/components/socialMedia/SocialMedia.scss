@@ -2,70 +2,86 @@
 
 .social-media-div {
   font-size: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: $spacingMd;
+  margin: $spacingXl 0;
+  flex-wrap: wrap;
 }
 
 .icon-button {
-  margin-bottom: 10px;
+  margin-bottom: $spacingSm;
+  transition: transform 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-3px);
+  }
 }
 
 .icon-button i {
   color: $textColorDark;
-  border-radius: 2.6rem;
+  border-radius: 50%;
   cursor: pointer;
   display: inline-block;
   font-size: 1.3rem;
-  height: 2.6rem;
-  line-height: 2.6rem;
-  margin: 0 5px;
+  height: 3rem;
+  line-height: 3rem;
+  margin: 0;
   position: relative;
   text-align: center;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  width: 2.6rem;
-  margin-bottom: 10px;
-  transition: 0.2s ease-in;
+  width: 3rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  
+  &:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    transform: scale(1.1);
+  }
 }
 
 .facebook i {
-  background-color: $faceBook;
+  background: $primaryGradient;
 }
 
 .linkedin i {
-  background-color: $linkedin;
+  background: $primaryGradient;
 }
 
 .github i {
-  background-color: $github;
+  background: $primaryGradient;
 }
 
 .gitlab i {
-  background-color: $gitlab;
+  background: $primaryGradient;
 }
 
 .google i {
-  background-color: $google;
+  background: $primaryGradient;
 }
 
 .twitter i {
-  background-color: $twitter;
+  background: $primaryGradient;
 }
 
 .medium i {
-  background-color: $medium;
+  background: $primaryGradient;
 }
 
 .stack-overflow i {
-  background-color: $stackoverflow;
+  background: $primaryGradient;
 }
 
 .kaggle i {
-  background-color: $kaggle;
+  background: $primaryGradient;
 }
 
 .instagram i {
-  background-color: $instagram;
+  background: $primaryGradient;
 }
 
 /* Hover Transition */
@@ -79,12 +95,34 @@
 .stack-overflow i:hover,
 .kaggle i:hover,
 .medium i:hover {
-  background-color: $textColor;
+  background: $secondaryGradient;
 }
 
 /* Media Query */
 @media (max-width: 768px) {
   .social-media-div {
     text-align: center;
+    gap: $spacingSm;
+    margin: $spacingLg 0;
+  }
+  
+  .icon-button i {
+    height: 2.5rem;
+    width: 2.5rem;
+    line-height: 2.5rem;
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .social-media-div {
+    gap: $spacingXs;
+  }
+  
+  .icon-button i {
+    height: 2.2rem;
+    width: 2.2rem;
+    line-height: 2.2rem;
+    font-size: 1rem;
   }
 }

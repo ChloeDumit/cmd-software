@@ -1,15 +1,63 @@
 @import "../../_globalColor";
 
+.footer-div {
+
+  padding: $spacingXl $spacingLg;
+  background: $cardGradient;
+  position: relative;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: $cardGradient;
+    z-index: -1;
+  }
+}
+
 .footer-text {
   text-align: center;
   color: $subTitle !important;
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0;
+  letter-spacing: 0.5px;
+  
+  span {
+    background: $primaryGradient;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 600;
+  }
 }
 
 .dark-mode {
   color: $textColorDark !important;
 }
 
-.footer-div {
-  margin-top: 2rem;
-  padding-bottom: 1rem;
+/* Media Query */
+@media (max-width: 768px) {
+  .footer-div {
+    padding: $spacingLg $spacingMd;
+    margin-top: $spacingXl;
+  }
+  
+  .footer-text {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-div {
+    padding: $spacingMd $spacingSm;
+  }
+  
+  .footer-text {
+    font-size: 0.85rem;
+  }
 }

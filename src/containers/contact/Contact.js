@@ -1,16 +1,12 @@
 import React, { useContext, useRef } from "react";
 import "./Contact.scss";
 import SocialMedia from "../../components/socialMedia/SocialMedia";
-import { illustration, contactInfo } from "../../portfolio";
-import { Fade } from "react-reveal";
-import email from "../../assets/lottie/email";
-import DisplayLottie from "../../components/displayLottie/DisplayLottie";
-import emailjs from "@emailjs/browser";
+import {  contactInfo } from "../../portfolio";
+
 import ContactForm from "../../components/contactForm/ContactForm";
 
 export default function Contact() {
   return (
-    <Fade bottom duration={1000} distance="20px">
       <div className="main contact-margin-top" id="contact">
         <div className="contact-div-main">
           <div className="contact-header">
@@ -33,6 +29,5 @@ export default function Contact() {
         </div>
         <SocialMedia />
       </div>
-    </Fade>
   );
 }

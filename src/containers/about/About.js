@@ -1,19 +1,18 @@
 import React from "react";
-import { Fade } from "react-reveal";
 import "./About.scss";
-
-import { illustration, about } from "../../portfolio";
+import Lottie from "lottie-react";
+import { about } from "../../portfolio";
+import about_lottie from "../../assets/lottie/about.json";
 
 export default function About() {
   if (!about.displayAbout) {
     return null;
   }
   return (
-    <Fade bottom duration={1000} distance="40px">
       <div className="about-main" id="about">
         <div className="about-main">
           <div className="about-image-div">
-            <img src={about.photo} />
+            <Lottie animationData={about_lottie} loop={true} />
           </div>
           <div className="about-text-div">
             <div>
@@ -23,6 +22,5 @@ export default function About() {
           </div>
         </div>
       </div>
-    </Fade>
   );
 }

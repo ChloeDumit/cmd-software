@@ -1,54 +1,90 @@
 @import "../../_globalColor";
 
 .main {
-  width: 90%;
-  padding: 20px 10px;
-  margin: 0px auto;
+  width: 100%;
+  padding: $spacingLg $spacingMd;
+  margin: 0 auto;
   margin-top: 4rem;
 }
-.greet-main {
-  padding: 100px;
 
-  background-color: #E8EBEB;
+.greet-main {
+  padding: $spacingXxl $spacingXl;
+  background: $cardGradient;
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: $cardGradient;
+    z-index: -1;
+  }
 }
 
 .greeting-main {
   display: flex;
+  align-items: center;
+  gap: $spacingXxl;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 100%;
 }
 
 .subTitle {
   color: $subTitle !important;
-}
-
-.greeting-main {
-  display: flex;
+  font-weight: 400;
+  letter-spacing: 0.5px;
 }
 
 .greeting-main > * {
   flex: 1;
-  margin-bottom: 30px;
+  margin-bottom: $spacingLg;
 }
+
 .button-greeting-div {
   display: flex;
-  margin-top: 20px;
+  margin-top: $spacingXl;
+  gap: $spacingMd;
 }
 
 .greeting-text {
-  font-size: 70px;
+  font-size: 4rem;
   line-height: 1.1;
-  font-weight: 100;
+  font-weight: 700;
   color: $textColor !important;
+  margin-bottom: $spacingLg;
+  background: $primaryGradient;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: -0.02em;
 }
 
 .greeting-text-p {
-  font-size: 30px;
-  line-height: 40px;
+  font-size: 1.5rem;
+  line-height: 1.6;
+  color: $subTitle;
+  font-weight: 400;
+  margin-bottom: $spacingLg;
+  max-width: 600px;
 }
 
-.greeting-image-div > img {
-  max-width: 100%;
-  height: auto;
-  margin-left: 15px;
+.greeting-image-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  > img {
+    max-width: 100%;
+    height: auto;
+    border-radius: $borderRadiusCard;
+    box-shadow: $cardShadow;
+  }
 }
 
 .wave-emoji {
@@ -86,30 +122,57 @@
 /* Media Query */
 @media (max-width: 1380px) {
   .greeting-text {
-    font-size: 50px;
+    font-size: 3.5rem;
   }
   .greeting-text-p {
-    font-size: 20px;
+    font-size: 1.3rem;
   }
 }
+
 @media (max-width: 768px) {
-  .button-greeting-div {
-    justify-content: space-around;
+  .greet-main {
+    padding: $spacingXl $spacingLg;
   }
-  .greeting-text {
-    font-size: 30px;
-    text-align: center;
-  }
-  .greeting-text-p {
-    font-size: 16px;
-    line-height: normal;
-    text-align: center;
-  }
+  
   .greeting-main {
-    display: block;
+    flex-direction: column;
+    text-align: center;
+    gap: $spacingLg;
   }
+  
+  .button-greeting-div {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .greeting-text {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+  
+  .greeting-text-p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    text-align: center;
+  }
+  
   .greeting-image-div {
-    height: 256px;
+    height: 300px;
+    order: -1;
+  }
+}
+
+@media (max-width: 480px) {
+  .greeting-text {
+    font-size: 2rem;
+  }
+  
+  .greeting-text-p {
+    font-size: 1.1rem;
+  }
+  
+  .greet-main {
+    padding: $spacingLg $spacingMd;
   }
 }
 

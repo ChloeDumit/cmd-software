@@ -3,75 +3,112 @@
 .container {
   display: flex;
   justify-content: center;
-
+  align-items: center;
+  margin-bottom: $spacingLg;
 }
 
 /* Rectangle Card Layout */
 .rectangle {
-  box-shadow: 0px 20px 50px $darkBoxShadow;
-  -webkit-transition: all 0.3s ease;
-  padding: 2rem;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-  margin-top: 50px;
-  border-radius: 4rem;
-  background-color: #DCDCDC;
+  background: $cardGradient;
+  box-shadow: $cardShadow;
+  border-radius: $borderRadiusCard;
+  padding: $spacingXl;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  margin-top: $spacingLg;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: $primaryGradient;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+  }
+  
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: $cardShadowHover;
+    
+    &::before {
+      transform: scaleX(1);
+    }
+  }
+}
 
-}
-.rectangle:hover {
-  box-shadow: 0 20px 40px $textColorDark;
-}
 .dark-rectangle {
   box-shadow: 0px 0px 20px 0px;
 }
+
 .mask {
   clip: rect(0px, 460px, 220px, 0px);
-  border-radius: 4px;
+  border-radius: $borderRadiusSmall;
   position: absolute;
 }
 
-/* Card  Styling */
+/* Card Styling */
 .talk-card-title {
   color: $textColor;
-  margin: auto;
+  margin: 0 auto $spacingMd;
   text-align: center;
-  margin-top: 25px;
-  font-size: 30px;
-  line-height: normal;
+  font-size: 1.8rem;
+  line-height: 1.3;
+  font-weight: 600;
   overflow: hidden;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   justify-content: center;
+  letter-spacing: -0.01em;
 }
-.talk-card-subtitle {
 
+.talk-card-subtitle {
   text-align: center;
-  padding-left: 30px;
-  padding-right: 30px;
-  font-size: 16px;
+  padding: 0 $spacingMd;
+  font-size: 1rem;
   color: $talkCardSubTitle;
-  line-height: 18px;
+  line-height: 1.6;
   overflow: hidden;
   display: -webkit-box;
+  -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
+  font-weight: 400;
+  margin: 0;
 }
-
 
 /* Media Query */
 @media (max-width: 1380px) {
-  .card-title {
-    font-size: 25px;
+  .talk-card-title {
+    font-size: 1.6rem;
   }
 }
+
 @media (max-width: 768px) {
+  .rectangle {
+    padding: $spacingLg;
+    margin-top: $spacingMd;
+  }
+  
   .mask {
     clip-path: none;
     position: relative;
   }
+  
   .talk-card-title {
-    margin-top: 30px;
+    margin-bottom: $spacingSm;
+    font-size: 1.5rem;
   }
+  
+  .talk-card-subtitle {
+    padding: 0;
+    font-size: 0.95rem;
+  }
+  
   .talk-card-image {
     width: 100%;
   }
@@ -79,6 +116,20 @@
   .square {
     width: 100%;
     height: auto;
-    padding-bottom: 30px;
+    padding-bottom: $spacingLg;
+  }
+}
+
+@media (max-width: 480px) {
+  .rectangle {
+    padding: $spacingMd;
+  }
+  
+  .talk-card-title {
+    font-size: 1.3rem;
+  }
+  
+  .talk-card-subtitle {
+    font-size: 0.9rem;
   }
 }
