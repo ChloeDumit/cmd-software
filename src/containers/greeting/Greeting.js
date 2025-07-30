@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React from "react";
 import "./Greeting.scss";
 import mockup from "../../assets/lottie/mockup.json";
 import Lottie from "lottie-react";
