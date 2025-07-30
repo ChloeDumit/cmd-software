@@ -1,13 +1,13 @@
 import React from "react";
 import "./SplashScreen.css";
-import DisplayLottie from "../../components/displayLottie/DisplayLottie";
-import {  splashScreen } from "../../portfolio";
+import { splashScreen } from "../../portfolio";
+import Lottie from "lottie-react";
 
 export default function SplashScreen() {
   return (
     <div className="splash-container">
       <div className="splash-animation-container">
-        <DisplayLottie animationData={splashScreen.animation} />
+        <Lottie animationData={splashScreen.animation} />
       </div>
     </div>
   );
