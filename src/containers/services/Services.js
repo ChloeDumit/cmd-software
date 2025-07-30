@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React  from "react";
 import "./services.scss";
 import { services } from "../../portfolio";
 import ServiceCard from "../../components/serviceCard/serviceCard";
